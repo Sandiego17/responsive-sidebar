@@ -33,6 +33,20 @@ body {
   height: 100vh;
 }
 
+/* ====== Reusable CSS ====== */
+.sidebar .text {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebar .logo-image {
+  display: flex;
+  align-items: center;
+  min-width: 60px;
+}
+
+/* ====== SideBar ====== */
 .sidebar {
   background: var(--sidebar-color);
   height: 100%;
