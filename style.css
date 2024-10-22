@@ -78,6 +78,24 @@ body.dark {
   padding: 8px;
 }
 
+.sidebar.collapse {
+  width: 88px;
+}
+
+.sidebar.collapse .text,
+.sidebar.collapse .menu-bar .moon-sun {
+  display: none;
+}
+
+.sidebar.collapse .notification-count {
+  font-size: 10px;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  right: 28px;
+  top: 325px;
+}
+
 .sidebar header {
   position: relative;
   padding: 8px;
@@ -196,8 +214,8 @@ header .image-text .header-text {
   position: absolute;
 }
 
-.menu-bar .mode img.sun {
-  opacity: 0;
+img.mode-icon {
+  display: none;
 }
 
 .menu-bar .mode .toggle-switch {
