@@ -11,12 +11,12 @@
 :root {
   --body-color: #E4E9F7;
   --primary-color: #695CFE;
-  /* --primary-color: #8576FF; mine */
-  /* --primary-color-dark: #484554; mine */
+  /* --primary-color: #8576FF; */
+  /* --primary-color-dark: #484554; */
   --primary-color-light: #F6F5FF;
-  /* --primary-color-select: #ADA9BB; mine */
-  /* --primary-color-select-200: 6A6676; mine */
-  /* --select-color: #FCF7FF; mine */
+  /* --primary-color-select: #ADA9BB; */
+  /* --primary-color-select-200: 6A6676; */
+  /* --select-color: #FCF7FF; */
   --sidebar-color: #FFF;
   --text-color: #707070;
   --toggle-color: #DDD;
