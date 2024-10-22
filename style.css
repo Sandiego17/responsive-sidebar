@@ -61,6 +61,14 @@ body.dark {
   min-width: 60px;
 }
 
+.logo-small {
+  width: 50px;
+}
+
+.display-none {
+  display: none;
+}
+
 .centered {
   display: flex;
   align-items: center;
@@ -101,7 +109,7 @@ body.dark {
   padding: 8px;
 }
 
-.sidebar .image-text img {
+.sidebar .image-text .main-logo {
   /* border-radius: 6px; */
   width: 120px;
 }
