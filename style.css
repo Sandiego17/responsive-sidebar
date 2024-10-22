@@ -31,6 +31,21 @@
 body {
   background: var(--body-color);
   height: 100vh;
+  transition: var(--tran-04);
+}
+
+body.dark {
+  --body-color: #18191A;
+  --primary-color: #3A3B3C;
+  /* --primary-color: #8576FF; mine */
+  /* --primary-color-dark: #484554; mine */
+  --primary-color-light: #3A3B3C;
+  /* --primary-color-select: #ADA9BB; mine */
+  /* --primary-color-select-200: 6A6676; mine */
+  /* --select-color: #FCF7FF; mine */
+  --sidebar-color: #242526;
+  --text-color: #CCC;
+  --toggle-color: #FFF;
 }
 
 /* ====== Reusable CSS ====== */
@@ -76,6 +91,7 @@ body {
 .sidebar header .image-text {
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
 header .image-text .header-text {
@@ -116,7 +132,7 @@ header .image-text .header-text {
   margin-top: 10px;
 }
 
-.sidebar li:hover {
+.menu li:hover {
   background: #FCF7FF;
   & .icon {
     filter: invert(49%) sepia(37%) saturate(5361%) hue-rotate(223deg) brightness(104%) contrast(102%);
@@ -149,7 +165,7 @@ header .image-text .header-text {
 .notification-count {
   background: red;
   border-radius: 50%;
-  color: var(--sidebar-color);
+  color: #FFF;
   height: 34px;
   width: 34px;
   position: absolute;
@@ -180,6 +196,40 @@ header .image-text .header-text {
   position: absolute;
 }
 
+.menu-bar .mode img.sun {
+  opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+  cursor: pointer;
+  height: 100%;
+  min-width: 60px;
+}
+
+.toggle-switch .switch {
+  background: var(--toggle-color);
+  border-radius: 25px;
+  height: 22px;
+  width: 44px;
+  position: relative;
+}
+
+.switch::before {
+  background: var(--sidebar-color);
+  border-radius: 50%;
+  content: '';
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: var(--tran-03);
+}
+
+body.dark .switch::before {
+  left: 24px;
+}
 
 
 
