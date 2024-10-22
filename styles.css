@@ -46,6 +46,12 @@ body {
   min-width: 60px;
 }
 
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ====== SideBar ====== */
 .sidebar {
   background: var(--sidebar-color);
