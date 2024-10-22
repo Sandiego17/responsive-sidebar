@@ -32,17 +32,13 @@ body {
   background: var(--body-color);
   height: 100vh;
   transition: var(--tran-04);
+  display: flex;
 }
 
 body.dark {
   --body-color: #18191A;
   --primary-color: #3A3B3C;
-  /* --primary-color: #8576FF; mine */
-  /* --primary-color-dark: #484554; mine */
   --primary-color-light: #3A3B3C;
-  /* --primary-color-select: #ADA9BB; mine */
-  /* --primary-color-select-200: 6A6676; mine */
-  /* --select-color: #FCF7FF; mine */
   --sidebar-color: #242526;
   --text-color: #CCC;
   --toggle-color: #FFF;
@@ -53,6 +49,13 @@ body.dark {
   color: var(--text-color);
   font-size: 16px;
   font-weight: 500;
+  opacity: 1;
+  transition: var(--tran-03);
+  white-space: nowrap;
+}
+
+nav.collapse header .toggle {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .sidebar .logo-image {
@@ -80,10 +83,11 @@ body.dark {
   background: var(--sidebar-color);
   height: 100%;
   width: 250px;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   top: 0;
   padding: 8px;
+  transition: var(--tran-05);
 }
 
 .sidebar.collapse {
@@ -100,7 +104,7 @@ body.dark {
   height: 14px;
   width: 14px;
   position: absolute;
-  right: 28px;
+  left: 48px;
   top: 325px;
 }
 
@@ -110,7 +114,6 @@ body.dark {
 }
 
 .sidebar .image-text .main-logo {
-  /* border-radius: 6px; */
   width: 120px;
 }
 
@@ -143,6 +146,7 @@ header .image-text .header-text {
   right: -25px;
   top: 50%;
   transform: translateY(-50%);
+  transition: var(--tran-03);
 }
 
 .sidebar .menu-bar {
@@ -169,8 +173,6 @@ header .image-text .header-text {
 }
 
 .sidebar li .icon {
-  /* height: 20px; */
-  /* min-width: 60px; */
   width: 22px;
 }
 
@@ -195,21 +197,14 @@ header .image-text .header-text {
   height: 34px;
   width: 34px;
   position: absolute;
-  right: 16px;
+  left: 180px;
+  transition: var(--tran-05);
 }
 
 .menu-bar .mode {
   background-color: var(--primary-color-light);
+  border-radius: 12px;
 }
-
-/* .moon-sun img {
-  position: absolute;
-  left: 8px;
-}
-
-.mode .text {
-  padding-left: 38px;
-} */
 
 .menu-bar .mode .moon-sun {
   display: flex;
@@ -220,6 +215,7 @@ header .image-text .header-text {
 
 .menu-bar .mode img {
   position: absolute;
+  transition: var(--tran-03);
 }
 
 img.mode-icon {
@@ -228,8 +224,14 @@ img.mode-icon {
 
 .menu-bar .mode .toggle-switch {
   cursor: pointer;
-  height: 100%;
   min-width: 60px;
+  position: absolute;
+  left: 154px;
+  transition: var(--tran-05);
+}
+
+.sidebar.collapse .menu-bar .mode .toggle-switch {
+  left: 14px;
 }
 
 .toggle-switch .switch {
@@ -257,11 +259,17 @@ body.dark .switch::before {
   left: 24px;
 }
 
+.home {
+  background: var(--body-color);
+  height: 100vh;
+  padding: 16px;
+  transition: var(--tran-05);
+  width: 100%;
+}
 
-
-
-
-
-
-/* collapse icon color: #64748B */
-/* home hover color: #8576FF */
+.home .text {
+  color: var(--text-color);
+  font-size: 30px;
+  font-weight: 500;
+  padding: 8px 40px;
+}
