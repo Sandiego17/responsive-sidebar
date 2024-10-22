@@ -6,6 +6,7 @@ const modeText = document.querySelector(".mode-text");
 const themeIcons = document.querySelectorAll(".theme-icon");
 const linkItems = document.querySelectorAll(".link-item");
 const modeElement = document.querySelector(".mode");
+const logos = document.querySelectorAll(".logo");
 
 // Toggle sidebar collapse
 toggle.addEventListener("click", () => {
@@ -24,6 +25,10 @@ toggle.addEventListener("click", () => {
 
     modeElement.classList.remove("centered");
   }
+
+  logos.forEach(logo => {
+    logo.classList.toggle("display-none");
+  });
 });
 
 // Toggle dark mode and icon classes
